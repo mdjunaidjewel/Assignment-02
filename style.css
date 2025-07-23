@@ -1,4 +1,6 @@
+/* Font-Family */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 *{
     margin: 0;
@@ -8,6 +10,12 @@
     text-decoration: none;
 }
 /* THis here Common CSS */
+.bg-color{
+    background-color: #f5f8ff;
+}
+.hide{
+    display: none;
+}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -19,6 +27,11 @@ main > section{
 .d-flex{
     display: flex;
 }
+p{
+    color: #7b7c80;
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+}
 /* Common CSS End */
 
 /* This is Header Styles Start */
@@ -27,11 +40,8 @@ nav{
     align-items: center;
     padding: 1.5rem 0;
 }
-.logo{
-    width: 5.5rem;
-}
 .logo img{
-    width: 100%;
+    width: 5.5rem;
     cursor: pointer;
 }
 .navlinks{
@@ -51,7 +61,7 @@ nav{
     color: black;
     font-weight: 600;
 }
-.navlinks .cart{
+.cart{
     color: black;
 }
 /* This is Header Styles End */
@@ -60,9 +70,129 @@ nav{
 .hero-section{
     justify-content: space-between;
     align-items: end;
+    width: 100%;
+}
+.hero-section .hero-content h1{
+    font-size: 3.5rem;
+    font-family: "Noto Serif", serif;
+}
+.hero-section .hero-content span{
+    color: #e85907;
 }
 .hero-section .hero-img img{
-    max-width: 570px;
-    
+    max-width: 35rem;
 }
 /* Hero Styles End */
+
+/* Plants Section Styles Start */
+.plants-content{
+    max-width: 51rem;
+    margin: 1rem auto;
+}
+.plants-content h1{
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Noto Serif", serif;
+    margin: 0.8rem 0;
+}
+.plants-content h1 span{
+    color: #e85907;
+}
+.plants-content p{
+    text-align: center;
+    width: 56rem;
+    margin: 0 auto;
+}
+.plants-cards{
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem 0;
+}
+.plants-card .img img{
+    width: 100%;
+}
+.plants-card{
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Inter", sans-serif;
+}
+.plants-card .content{
+    text-align: center;
+    width: 100%;
+}
+.plants-card .content .name h4{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+.price span{
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+.btn{
+    text-align: center;
+    background-color: #e85907;
+    padding: 14px 16px;
+    width: 100%;
+    border: none;
+    margin-top: 1rem;
+}
+.btn a{
+    color: white;
+    font-size: 1rem;
+}
+
+/* Plants Section Styles End */
+
+/* Responsive for Small Devices */
+@media screen and (max-width:576px) {
+    main > section{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    nav{
+        padding: 1rem 0;
+    }
+    .logo img{
+        width: 4rem;
+    }
+    .navlinks li{
+        display: none;
+    }
+    .hero-section{
+        flex-direction: column-reverse;
+    }
+    .hero-section .hero-img img{
+    width: 100%;
+}
+    .hero-content,
+    .plants-section,
+    .plants-content p{
+        width: 94%;
+        margin: 1rem auto;
+    }
+    .hero-section .hero-content h1,
+    .plants-content h1{
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .plants-cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .btn{
+    padding: 12px 14px;
+    margin-top: 0.7rem;
+    }
+    .btn a{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+}

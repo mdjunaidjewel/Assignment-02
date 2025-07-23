@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
 }
 /* THis here Common CSS */
@@ -29,7 +28,7 @@ main > section{
 }
 p{
     color: #7b7c80;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-family: "Inter", sans-serif;
 }
 /* Common CSS End */
@@ -49,6 +48,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    list-style: none;
 }
 .navlinks li a{
     color: #8987A1;
@@ -149,6 +149,45 @@ nav{
 
 /* Plants Section Styles End */
 
+/* Plants Lover Styles Start */
+.plants-lover{
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 4rem;
+    padding-top: 4rem;
+}
+.plants-lover-right h1{
+    font-family: "Noto Serif", serif;
+    font-size: 3rem;
+}
+.content ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+.content ul li{
+    margin: 1.2rem 0;
+}
+ul li::marker{
+    color: #7b7c80;
+}
+.plants-lover-left{
+    position: relative;
+}
+.plants-lover-left img{
+    max-width: 32rem;
+}
+.plants-lover-left .img2{
+    position: absolute;
+    right: -90px;
+    top: -120px;
+    width: 17rem;
+}
+.plants-lover-left .img2 img{
+    width: 100%;
+}
+/* Plants Lover Styles End */
+
 /* Responsive for Small Devices */
 @media screen and (max-width:576px) {
     main > section{
@@ -169,21 +208,30 @@ nav{
     }
     .hero-section .hero-img img{
     width: 100%;
-}
+    }
     .hero-content,
     .plants-section,
-    .plants-content p{
+    .plants-content p,
+    .plants-lover{
         width: 94%;
         margin: 1rem auto;
     }
     .hero-section .hero-content h1,
-    .plants-content h1{
+    .plants-content h1,
+    .plants-lover-right h1{
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
     .plants-cards{
         grid-template-columns: repeat(2, 1fr);
         gap: 14px;
+    }
+    .plants-card .content .name h4{
+        margin-bottom: 0.2rem;
+    }
+    .price span,
+    .plants-card .content .name h4,{
+        font-size: 1rem;
     }
     .btn{
     padding: 12px 14px;
@@ -192,7 +240,23 @@ nav{
     .btn a{
         font-size: 0.8rem;
     }
+    .plants-lover{
+        flex-direction: column;
+        padding-top: 0;
+    }
+    .plants-lover-left img{
+        max-width: 100%;
+        margin: 0.8rem 0;
+    }
+    .plants-lover-left .img2{
+        display: none;
+    }
     p{
         font-size: 0.9rem;
     }
+}
+
+/* Responsive of Largest Devices */
+@media screen and (min-width:992px) {
+    
 }

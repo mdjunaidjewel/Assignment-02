@@ -15,6 +15,19 @@
 .hide{
     display: none;
 }
+/* overlay */
+.dark-overlay{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -212,16 +225,14 @@ ul li::marker{
 .plants-shop-img .left{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-}
-.left .img1 img,
-.left .img2 img{
+    gap: 1.5rem;
 }
 .left .img1 img,
 .left .img2 img,
 .right .img3 img
 {
     border-radius: 1rem;
+    display: block;
 }
 .left .img1,
 .left .img2,
@@ -237,6 +248,7 @@ ul li::marker{
     transform: translate(-50%,-50%);
     font-family: "Noto Serif", serif;
     text-align: center;
+    z-index: 2;
 }
 .left .img1 .img-content h3,
 .left .img2 .img-content h3,
@@ -252,7 +264,7 @@ ul li::marker{
     text-decoration: underline;
     text-underline-offset: 4px;
     text-align: center;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     display: block;
     font-weight: 600;
     font-family: "Inter", sans-serif;
@@ -277,13 +289,18 @@ ul li::marker{
     .hero-section{
         flex-direction: column-reverse;
     }
-    .hero-section .hero-img img{
-    width: 100%;
+    .hero-section 
+    .hero-img img,
+    .left .img1 img,
+    .left .img2 img,
+    .right .img3 img{
+        width: 100%;
     }
     .hero-content,
     .plants-section,
     .plants-content p,
-    .plants-lover{
+    .plants-lover,
+    .plants-shop-img{
         width: 94%;
         margin: 1rem auto;
     }
@@ -325,6 +342,9 @@ ul li::marker{
     }
     .deals-content p{
         padding: 0 1rem;
+    }
+    .plants-shop-img{
+        flex-direction: column;
     }
     p{
         font-size: 0.9rem;

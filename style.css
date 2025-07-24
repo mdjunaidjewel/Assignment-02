@@ -188,6 +188,77 @@ ul li::marker{
 }
 /* Plants Lover Styles End */
 
+/* Deals Section Start */
+.deals-content h1{
+    text-align: center;
+    font-family: "Noto Serif", serif;
+    font-size: 3rem;
+}
+.deals-content h1 span{
+    color: #e85907;
+}
+.deals-content p{
+    max-width: 55;
+    margin: 1rem auto;
+    text-align: center;
+}
+.plants-shop{
+    width: 100%;
+}
+.plants-shop-img{
+    align-items: stretch;
+    gap: 1.2rem;
+}
+.plants-shop-img .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.left .img1 img,
+.left .img2 img{
+}
+.left .img1 img,
+.left .img2 img,
+.right .img3 img
+{
+    border-radius: 1rem;
+}
+.left .img1,
+.left .img2,
+.right .img3{
+    position: relative;
+}
+.left .img1 .img-content,
+.left .img2 .img-content,
+.right .img3 .img-content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Noto Serif", serif;
+    text-align: center;
+}
+.left .img1 .img-content h3,
+.left .img2 .img-content h3,
+.right .img3 .img-content h3{
+    color: white;
+    font-size: 1.2rem;
+    width: 16rem;
+}
+.left .img1 .img-content a,
+.left .img2 .img-content a,
+.right .img3 .img-content a{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-align: center;
+    margin-top: 0.5rem;
+    display: block;
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+}
+/* Deals Section End */
+
 /* Responsive for Small Devices */
 @media screen and (max-width:576px) {
     main > section{
@@ -218,7 +289,8 @@ ul li::marker{
     }
     .hero-section .hero-content h1,
     .plants-content h1,
-    .plants-lover-right h1{
+    .plants-lover-right h1,
+    .deals-content h1{
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
@@ -230,7 +302,7 @@ ul li::marker{
         margin-bottom: 0.2rem;
     }
     .price span,
-    .plants-card .content .name h4,{
+    .plants-card .content .name h4{
         font-size: 1rem;
     }
     .btn{
@@ -250,6 +322,9 @@ ul li::marker{
     }
     .plants-lover-left .img2{
         display: none;
+    }
+    .deals-content p{
+        padding: 0 1rem;
     }
     p{
         font-size: 0.9rem;

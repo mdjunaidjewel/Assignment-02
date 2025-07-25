@@ -450,6 +450,10 @@ footer{
         flex-direction: column;
         padding-top: 0;
     }
+    .content ul li{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
     .plants-lover-left img{
         max-width: 100%;
         margin: 0.8rem 0;
